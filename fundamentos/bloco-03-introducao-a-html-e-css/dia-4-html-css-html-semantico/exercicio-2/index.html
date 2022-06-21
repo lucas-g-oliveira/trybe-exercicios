@@ -1,44 +1,186 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-  </head>
-  <body>
-    <!--insira os elementos aqui-->
-    <header>
-      <h1 class="title">Soco a 80km/h: Conheça o Stomatopoda.</h1>
-      <nav class="navigator">
-      <ul>
-        <li id="home">Página Inicial</li>
-        <li id="about">Sobre</li>
-        <li id="content">Contato</li>
-      </ul>
-      </nav>
-    </header>
+<html lang="en">
 
-    <main>
-      <article>
-        <header>
-          <h2>Stomatopoda</h2>
-          <h3>Fatos sobre o Stomatopoda</h3>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Stomatopoda</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="h">
+            <h1> Soco a 80km/h: Conheça o Stomatopoda.</h1>
         </header>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum est dui, faucibus ut rutrum eget, ultrices consequat odio. Ut aliquet neque at ullamcorper fermentum. Fusce accumsan mauris et risus luctus gravida. Phasellus et arcu elit. Nullam porta ornare tellus, et pulvinar urna tincidunt in. Maecenas bibendum neque orci, mollis tempor metus gravida id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mi libero, quis dictum erat varius ac. Phasellus egestas commodo porta. Nulla a nibh tortor. Quisque gravida nisi nec nisl pulvinar varius. Praesent luctus, sem ac consequat semper, dui est tincidunt lorem, non cursus nisi augue ac quam. Nulla porta urna neque, ac fringilla nunc vulputate at. Ut hendrerit dui placerat felis consectetur maximus. In lobortis mauris a lectus aliquet, sodales elementum nulla volutpat. Sed volutpat maximus justo quis euismod.
-          Praesent fringilla aliquam magna id maximus. Nulla feugiat, dolor egestas tempor blandit, sapien mauris placerat lectus, et blandit lorem orci at ipsum. Donec vulputate nisl vestibulum quam consectetur sodales. Duis pellentesque quam a neque hendrerit tincidunt. Nulla pulvinar eros quis urna aliquam ultricies. Phasellus sed mi tincidunt, varius nunc ac, fringilla sem. Mauris laoreet magna est. Donec finibus hendrerit dapibus.
-          Sed lorem metus, varius et mattis ut, tempor a sem. Pellentesque eget orci vitae lectus consectetur ultrices et sed enim. Aliquam sed ligula sodales, hendrerit mi quis, semper massa. Aliquam nulla justo, venenatis id est in, sodales sagittis arcu. Suspendisse pellentesque porttitor nisl quis hendrerit. Donec a tincidunt lectus, at ullamcorper nisl. Etiam vitae purus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam felis eros, iaculis ac neque a, gravida ultricies quam. Duis vel sapien sed nisl bibendum volutpat sed eu turpis. Integer a enim rutrum mi lacinia pretium.
-          Aliquam facilisis vehicula velit, sit amet iaculis metus faucibus sed. Nulla a consequat lacus, vitae pretium orci. Ut et nisi ultricies, dictum ipsum ut, finibus odio. Ut sodales luctus enim. Sed ullamcorper et nisi ac molestie. Nunc ipsum dui, iaculis vulputate sagittis et, vehicula ut sem. Sed sollicitudin quam ut pulvinar tincidunt. Etiam sit amet lorem vitae nulla vulputate ornare eget ac erat. Suspendisse fringilla id velit non rhoncus.
-          Proin urna leo, blandit auctor imperdiet at, rutrum non lorem. Fusce nec euismod tellus. Duis tristique purus et est convallis, id blandit leo commodo. Quisque id turpis ultricies, bibendum tellus ut, elementum quam. Vivamus tempor ex eu orci maximus fermentum. Donec sed diam vitae ex commodo sodales. Mauris sit amet est aliquet, pellentesque sem in, blandit libero. Suspendisse et gravida eros. Vestibulum ligula mi, posuere sed dictum et, lobortis a tellus. Donec in sapien convallis, commodo lorem quis, vestibulum arcu. Fusce aliquet, elit vehicula suscipit malesuada, turpis magna viverra magna, at posuere enim nisl id purus. Vestibulum tincidunt suscipit mi, sed tristique nulla tempus tempor. Praesent eget nisl sed sapien feugiat fermentum consequat at nibh.
 
-        </p>
-
-
-      </article>
-  
-    </main>
-    
+        <nav class="n2">
+            <ul>
+                <li><a href="#home" alt="pagina inicial">Pagina Inicial</a></li>
+                <li><a href="https://www.youtube.com/watch?v=E0Li1k5hGBE" target="_blank" alt="Sobre">Sobre</a></li>
+                <li><a href="#ref_biblio" alt="contato">Contato</a></li>
+            </ul>
+        </nav>
 
 
-  </body>
+
+        <nav class="n">
+            <section class="info_nav">
+            <h3 class="info_h3">Informaçoes gerais</h3>
+            <ol>
+                <li><a href="#quem_sao">Quem são, onde vivem, e do que se alimentam?</a></li>
+                <li><a href="#golpe_ninja">Golpe ninja</a></li>
+                <li><a href="#super_visao">Super Visão</a></li>
+                <li><a href="#class_scientific">Classificação Cientifica</a></li>
+                <li><a href="#ref_biblio">Referências Bibliográficas</a></li>
+            </ol>
+        </section>
+
+        </nav>
+        <main class="m">
+            <article>
+                <h2 id="home">Fatos sobre o Stomatopoda </h2>
+
+                <section class="info_gerais section_unit">
+                    <h3 id="quem_sao">Quem são, onde vivem e do que se alimenta?</h3>
+                    <p>
+                        <img class="stomatopoda_img"
+                            src="https://img.ibxk.com.br/2013/4/materias/961713491012231.jpg?w=1040"
+                            alt="image stomatopoda">
+                        Os <em><strong>Odontodactylus scyllarus</strong></em> são predadores ativos que
+                        caçam presas com o auxílio de um sentido de
+                        visão muito apurado e capaz de interpretar
+                        polarização no espectro ultravioleta e
+                        infravermelho). Apresentam uma grande variação
+                        de tamanho, que pode ir de poucos milímetros
+                        até aproximadamente 40 cm nas espécies maiores.
+                        Eles vivem em fundo consolidado, lodoso ou ainda
+                        arenoso, onde cavam seus buracos ou aproveitam-se
+                        dos orifícios deixados por outros animais para neles
+                        se instalar. São animais exclusivamente carnívoros,
+                        alimentando-se de camarões, caranguejos, moluscos,
+                        peixes e até mesmo outros da mesma ordem. O segundo
+                        par de patas, muito desenvolvido, é usado tanto para
+                        atacar a presa como para se defender. O urópodo, quando
+                        aberto, também funciona para defesa, como um escudo,
+                        fechando a galeria em que o animal esteja instalado.
+                        A fêmea desova no local onde se abriga e, em caso de
+                        perigo, enrola os ovos como uma bola, prendendo-os junto
+                        ao corpo até encontrar um abrigo mais protegido.
+                    </p>
+                    <p>
+                        Também conhecidas como esquilas ou lagosta-boxeadora,
+                        espalhadas pelas costas dos mares tropicais e subtropicais.
+                        Além das patas, elas apresentam uma silhueta característica,
+                        devido ao grande comprimento aparentemente de seu abdómen.
+                        Os ovos ficam ligados por uma massa gelatinosa que a mãe
+                        carrega contra o ventre até que eclodem, limpando-os sem parar.
+                        São animais que apresentam comportamentos sociais muito
+                        variados, desde ameaças visuais contra predadores até
+                        comportamentos de côrte. De acordo com a anatomia da sua pata
+                        raptorial é possível distinguir entre dois grupos funcionais,
+                        as perfuradoras (spearers)ou as esmagadoras (smashers),
+                        sendo que cada um dos tipos apresenta sua própriavariação
+                        comportamental e até mesmo de habitat.
+                    </p>
+                    <p>
+                        As maiores esmagadoras, tais como exemplares de Odontodactylus
+                        scyllarus, são capazes de desferir um dos mais rápidos e
+                        violentos golpes do reino animal, <strong>um soco que pode apresentar
+                        a velocidade de um tiro calibre .22 (equivalente a 720 km/h)</strong>
+                        e uma pressão de impacto de 600 N/cm².[3] Essa força esmagadora
+                        é a responsável pelo seu título de "lagosta-boxeadora" e é capaz
+                        de facilmente quebrar a carapaça de um caranguejo, as conchas
+                        duras e calcificadas de gastrópodes ou até mesmo quebrar o
+                        vidro reforçado de um aquário.[4][5]
+
+                        Estomatópodes podem ser encontrados em quase todo o litoral
+                        brasileiro, mas não são animais fáceis de se observar pelos
+                        seus hábitos mais furtivos. Devem ser manuseados com muita
+                        cautela pois são animais preparados para se defender com força,
+                        caso sejam incomodados.
+                    </p>
+                    <p>
+                        <h3 id="class_scientific">Classificação cientifica</h3>
+                        <table>
+                            <th>Reino:</th>
+                            <td>Animalia</td>
+                            <tr></tr>
+                            <th>Filo:</th>
+                            <td>Crustacea</td>
+                            <tr></tr>
+                            <th>Classe:</th>
+                            <td>Malacostraca</td>
+                            <tr></tr>
+                            <th>Ordem:</th>
+                            <td>Stomatopoda</td>
+                            <tr></tr>
+                            <th>Familia:</th>
+                            <td>Odontoctalydae</td>
+                            <tr></tr>
+                            <th>Gênero:</th>
+                            <td>Odontodactylus</td>
+                            <tr></tr>
+                            <th>Especie:</th>
+                            <td>O. scyllarus</td>
+                            <tr></tr>
+                        </table>
+                    </p>
+                </section>
+                <section class="fatos_interessantes">
+                    <section class="section_unit">
+                        <h3 id="golpe_ninja">Golpe ninja</h3>
+                        <img class="soco" src="https://1.bp.blogspot.com/-7O2I_dmBygo/WwWPTo8RggI/AAAAAAAAP54/aItbLxTQtqEOKn8vHDLV8B6HXGeWIwdhwCLcBGAs/w640-h480/89d73c1873a8e1d5256bb0467f493665.jpg" alt="image_animal">
+                        <p>
+                            Essas patinhas se movem tão depressa que a água próxima a elas chega a ferver — em um
+                            fenômeno chamado supercavitação —, além de provocar uma onda de choque capaz de matar a
+                            presa mesmo que a lagosta maldita erre o golpe. Assim, com esse movimento ninja, as
+                            tamarutacas assassinam outros animais, despedaçando os coitados, mesmo que contem com
+                            carapaças protetoras. Veja um ataque a um pobre caranguejo no vídeo a seguir:
+                        </p>
+                        <p>
+                            Aliás, tipicamente os aquários não mantêm espécimes de mantis entre os seus animais, já que
+                            graças aos seus hábitos violentos e sanguinários, eles não curtem dividir o espaço com
+                            outros bichinhos, massacrando seus vizinhos. Além disso, devido ao seu golpezinho ninja de
+                            nada, a lagosta-boxeadora é capaz de destruir os vidros dos tanques.
+                        </p>
+                    </section>
+                
+                    <section class="section_unit">
+                        <h3 id="super_visao">Super visão</h3>
+                        <img class="olhos_stopo" src="https://img.ibxk.com.br/2013/4/materias/9617134910122215.jpg?w=1040" alt="olhos do stomatopoda">
+                        <p>
+                            Nossos olhos possuem três tipos desses receptores — que respondem à luz azul, verde e
+                            vermelha —, que nos permitem perceber o espectro de cores que vemos. Os cães contam com
+                            apenas dois tipos de cones (verde e azul), e é por isso que eles vêm tons de azul, verde e
+                            um pouco de amarelo. Já as borboletas, sortudas, possuem cinco tipos de cones, o que
+                            significa que <strong>elas conseguem enxergar cores que o nosso cérebro é incapaz de processar</strong>.
+                            Contudo, as lagostas-boxeadoras são um crustáceo tão sensacional que elas não possuem dois,
+                            três ou cinco tipos de cones apenas. Elas contam com 16! Assim, o arco-íris que elas
+                            enxergam deve ser uma verdadeira explosão termonuclear de cores, luz e beleza. Mas, como a
+                            grande maioria das criaturas, esses animais também possuem um lado obscuro. No caso das
+                            tamarutacas, esse lado é negro e sanguinário.
+                        </p>
+                        
+                    </section>
+                    <section>
+                     
+                    </section>
+                </section>
+               
+                <section class="section_unit">
+                    <h3 id="ref_biblio">Referências bibliograficas</h3>
+                    <ol>
+                        <li><a target="_blank"
+                                href="https://www.naturezabela.com.br/2018/05/mantis-lagosta-boxeadora.html">naturezabela.com.br</a>
+                        </li>
+                        <li><a target="_blank" href="https://pt.wikipedia.org/wiki/Stomatopoda">wikpedia.org</a></li>
+                    </ol>
+                </section>
+            </article>
+        </main>
+        <footer class="f"><h4>Conteúdo compilado por Lucas Gonçalves, 2022</h4></footer>
+    </div>
+</body>
+
 </html>

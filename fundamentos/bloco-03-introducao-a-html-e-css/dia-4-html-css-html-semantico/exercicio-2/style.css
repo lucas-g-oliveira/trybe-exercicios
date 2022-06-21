@@ -1,0 +1,128 @@
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: gray;
+}
+
+.container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 5vh 70vh 5vh;
+    grid-template-areas: "h h" "n2 n2" "m n" "f f";
+    grid-gap: 1px;
+}
+
+h1{
+    padding: 50px ;
+}
+
+.info_h3{
+    text-align: center;
+}
+.stomatopoda_img{
+    width: 300px;
+    height: 300px;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.olhos_stopo{
+    width: 100%;
+}
+
+ol a:hover{
+    border: 1px solid   ;
+    background-color: aqua;
+}
+ul a:hover{
+    border: 1px solid   ;
+    background-color: aquamarine;
+}
+
+ul li{
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    list-style-type: none;
+    
+}
+
+.n2 li {
+
+    display: inline-flex;
+    justify-content: start;
+}
+
+.info_nav{
+    padding: 5px;
+    background-color: #ecebeb;
+}
+
+.soco{
+    width: 100%;
+}
+
+td th {
+    padding: 20px ;
+}
+
+.section_unit{
+    background: #ecebeb;
+}
+
+table, td, th{
+    align-content: flex-start;
+    width: 200px;
+}
+
+.n2{
+    background: aqua;
+    grid-area: n2;
+}
+
+.h{
+    display: flex;
+    background: aquamarine;
+    grid-area: h;
+    justify-content: center;
+    align-content: center;
+}
+
+.n{
+    background: azure;
+    grid-area: n;
+    justify-content: center;
+}
+
+.n ol li{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.m{
+    padding: 20px;
+    background: azure;
+    grid-area: m;
+    overflow: auto;
+    
+}
+
+.f{
+    display: flex;
+    grid-area: f;
+    background-color: aquamarine;
+    justify-content: center;
+    align-content: center;
+}
+
+.h4{
+   text-align: center;
+   padding-bottom: 10px;
+}
+
