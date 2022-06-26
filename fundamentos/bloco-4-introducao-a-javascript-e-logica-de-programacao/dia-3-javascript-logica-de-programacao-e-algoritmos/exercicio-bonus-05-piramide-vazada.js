@@ -1,4 +1,4 @@
-let numeroImpar = 150;
+let numeroImpar = 15;
 
 if(numeroImpar%2==0){                                                                   //tratando numero, caso inserido numero par
     numeroImpar-=1;
