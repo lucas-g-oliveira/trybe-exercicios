@@ -102,6 +102,18 @@
       let sectioPai = document.querySelector('.left-content');
       sectioPai.appendChild(image);
 
+      // 8 - 🚀 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      let listaDeNUmeros = ['um','dois','três','quatro','cinco','seis','sete','oito','nove','dez'];  // lista a ser adicionada no html
+
+      let sectionList = document.querySelector('.right-content');                   //pai onde será inserida a lista
+      let listNumbers = document.createElement('ul');                               // lista que está sendo criada
+
+      for(let index = 0; index < listaDeNUmeros.length; index += 1){
+        let liCreate = document.createElement('li')
+        liCreate.innerText = listaDeNUmeros[index];
+        listNumbers.appendChild(liCreate);
+      }
+      sectionList.appendChild(listNumbers);
 
     </script>
   </body>
