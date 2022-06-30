@@ -62,13 +62,14 @@
       let bodyTemp = document.querySelector('body'); // recuperando o elemento pai, onde quero adicionar 0 filho - QuerySelector
 
       let newElement = document.createElement('h1'); // criando o novo elemento
-      console.log(bodyTemp);
       newElement.innerText = 'Exercicio 5.2'; //texto desse novo elemento
       bodyTemp.appendChild(newElement);
 
-      
-      
-      
+      // 2 - 🚀 Adicione a tag main com a classe main-content como filho da tag body;
+      let newTagMain = document.createElement('main');//.className('main-content');
+      newTagMain.classList.add('main-content');
+      bodyTemp.appendChild(newTagMain);
+      console.log(bodyTemp);
     </script>
   </body>
 </html>
