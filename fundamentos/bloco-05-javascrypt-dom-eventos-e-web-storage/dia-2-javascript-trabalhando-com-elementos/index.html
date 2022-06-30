@@ -59,17 +59,24 @@
     <script>
       // COLOQUE SEU CÓDIGO AQUI
       // 1 - 🚀 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
-      let bodyTemp = document.querySelector('body'); // recuperando o elemento pai, onde quero adicionar 0 filho - QuerySelector
+      let bodyTemp = document.querySelector('body');    // recuperando o elemento pai, onde quero adicionar 0 filho - QuerySelector
 
-      let newElement = document.createElement('h1'); // criando o novo elemento
-      newElement.innerText = 'Exercicio 5.2'; //texto desse novo elemento
-      bodyTemp.appendChild(newElement);
+      let newElement = document.createElement('h1');    // criando o novo elemento
+      newElement.innerText = 'Exercicio 5.2';           //texto desse novo elemento
+      bodyTemp.appendChild(newElement);                 // adicionando oelemento á tag já recuperada na linha 62, no exercicio 1
 
       // 2 - 🚀 Adicione a tag main com a classe main-content como filho da tag body;
-      let newTagMain = document.createElement('main');//.className('main-content');
-      newTagMain.classList.add('main-content');
-      bodyTemp.appendChild(newTagMain);
-      console.log(bodyTemp);
+      let newTagMain = document.createElement('main');  //criando o elememto
+      newTagMain.classList.add('main-content');         // adicionando uma classe
+      bodyTemp.appendChild(newTagMain);                 // adicionando oelemento á tag já recuperada na linha 62, no exercicio 1
+      
+      // 3 - 🚀 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      let tagMain = document.querySelector('.main-content');        //pegando a tag <main> pela classe .main-content
+
+      let sectionContentTemp = document.createElement('section');   //criando o elemento
+      sectionContentTemp.classList.add('center-content');           // adicionando uma classe
+      tagMain.appendChild(sectionContentTemp);                      // adicionando o elemento a um elemanto pai
+
     </script>
   </body>
 </html>
