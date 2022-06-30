@@ -90,10 +90,19 @@
       newTagMain.appendChild(sectionCenterContent);
 
       // 6 - 🚀 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
-
       let newSectionRightContent = document.createElement('section');
       newSectionRightContent.classList.add('right-content');
       tagMain.appendChild(newSectionRightContent);
+
+      // 7 - 🚀 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+
+      let image = document.createElement('img');
+      image.src = 'https://picsum.photos/200';
+      image.classList.add('small-image');
+      let sectioPai = document.querySelector('.left-content');
+      sectioPai.appendChild(image);
+
+
     </script>
   </body>
 </html>
