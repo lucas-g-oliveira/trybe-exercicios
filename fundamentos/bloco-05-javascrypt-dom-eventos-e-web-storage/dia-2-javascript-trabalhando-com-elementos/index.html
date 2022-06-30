@@ -78,12 +78,16 @@
       tagMain.appendChild(sectionContentTemp);                      // adicionando o elemento a um elemanto pai
 
       // 4 - 🚀 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
-      let sectionCenterContent = document.querySelector('.center-content');
+      let sectionCenterContent = document.querySelector('.center-content'); //pegando a tag 
       
-      let pElement = document.createElement('p');
-      pElement.innerText = '#VQV';
-      sectionCenterContent.appendChild(pElement);
+      let pElement = document.createElement('p');                   //criando o elemento
+      pElement.innerText = '#VQV';                                  //texto desse novo elemento
+      sectionCenterContent.appendChild(pElement);                   // adicionando o elemento a um elemanto pais
 
+      // 5 - 🚀 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      let sectionLeftElement = document.createElement('section');
+      sectionCenterContent.classList.add('left-content');
+      newTagMain.appendChild(sectionCenterContent);
     </script>
   </body>
 </html>
