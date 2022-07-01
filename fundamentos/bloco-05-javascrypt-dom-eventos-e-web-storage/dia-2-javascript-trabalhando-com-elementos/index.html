@@ -108,13 +108,28 @@
       let sectionList = document.querySelector('.right-content');                   //pai onde será inserida a lista
       let listNumbers = document.createElement('ul');                               // lista que está sendo criada
 
-      for(let index = 0; index < listaDeNUmeros.length; index += 1){
+      for(let index = 0; index < listaDeNUmeros.length; index += 1){                //for que insere a lista
         let liCreate = document.createElement('li')
         liCreate.innerText = listaDeNUmeros[index];
         listNumbers.appendChild(liCreate);
       }
       sectionList.appendChild(listNumbers);
 
+      // 9 - 🚀 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+      for(let indice = 0; indice < 3 ; indice += 1){                                 //for que cria as h3
+        let new3H3 = document.createElement('h3');                                   //h3 sendo criado
+        tagMain.appendChild(new3H3);                                                 //tag recenbendo seus filhotes
+      }
+      
+      
+      // Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+      // 1 - 🚀 Adicione a classe title na tag h1 criada;
+      // 2 - 🚀 Adicione a classe description nas 3 tags h3 criadas;
+      // 3 - 🚀 Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+      // 4 - 🚀 Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+      // 5 - 🚀 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+      // 6 - 🚀 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+    
     </script>
   </body>
 </html>
