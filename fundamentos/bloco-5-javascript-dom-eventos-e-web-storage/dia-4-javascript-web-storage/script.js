@@ -64,8 +64,16 @@ let objJasonDefault = {
     "font-family-storage": fontsPresets[0],
     "font-sizeP-storage": 14,
     "line-height-storage": 20,
-    "color-theme-storage": "green",
-    "theme-invert": false,
+    "color-theme-storage": "dart",
+    "theme-invert": true,
+}
+
+let objJasonReset = {
+    "font-family-storage": fontsPresets[0],
+    "font-sizeP-storage": 14,
+    "line-height-storage": 20,
+    "color-theme-storage": "dart",
+    "theme-invert": true,
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
