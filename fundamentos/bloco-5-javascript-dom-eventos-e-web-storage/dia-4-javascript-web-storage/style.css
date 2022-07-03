@@ -21,6 +21,7 @@ html, body{
     margin-top: 20px;
     background-color: white;
     align-content: flex-start;
+    border-radius: 35px;
 }
 
 main{
@@ -50,11 +51,9 @@ main{
     height: 35px;
     margin: 10px;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     justify-items: center;
-
     padding: 1px;
     background-color: black;
 }

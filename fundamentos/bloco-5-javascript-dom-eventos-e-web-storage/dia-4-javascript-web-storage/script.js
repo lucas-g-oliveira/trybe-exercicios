@@ -29,15 +29,14 @@ como farei?
 let objThermes = {
     "dark": { 'rgb-pri': 'rgb(255, 255, 255)', 'rgb-sec': 'rgb(0, 0, 0)', },
     "purple": { 'rgb-pri': 'rgb(245, 110, 243)', 'rgb-sec': 'rgb(108, 0, 147)', },
-    "green": { 'rgb-pri':'rgb(141, 230, 160)', 'rgb-sec':'rgb(0, 92, 15)', },
+    "green": { 'rgb-pri': 'rgb(141, 230, 160)', 'rgb-sec': 'rgb(0, 92, 15)', },
     "blue": { 'rgb-pri': 'rgb(139, 193, 255)', 'rgb-sec': 'rgb(2, 31, 140)', },
 };
 
 //fontPresset recebe uma lista, pq quando o numero de cliques chegar ou limite, é melhor pra reiniciar
 let fontsPresets = [
     "'Arial', 'Helvetica', 'sans-serif'",
-    "'Helvetica','sans-serif'",
-    "'Times New Roman', 'Times', 'serif'",
+    "'Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif'",
     "'Courier New', 'Courier', 'monospace'",
     "'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif'",
     "'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'"
@@ -53,7 +52,7 @@ let fontSizeP = {
 
 let lineHeight = {
     'min': 10,
-    'max': 40,
+    'max': 50,
     //'current':20,
     //correr de 5px em 5px
 }
@@ -64,15 +63,15 @@ let objJasonDefault = {
     "font-family-storage": fontsPresets[0],
     "font-sizeP-storage": 14,
     "line-height-storage": 20,
-    "color-theme-storage": "dart",
-    "theme-invert": true,
+    "color-theme-storage": "dark",
+    "theme-invert": false,
 }
 
 let objJasonReset = {
     "font-family-storage": fontsPresets[0],
     "font-sizeP-storage": 14,
     "line-height-storage": 20,
-    "color-theme-storage": "dart",
+    "color-theme-storage": "dark",
     "theme-invert": true,
 }
 
@@ -80,18 +79,23 @@ let objJasonReset = {
 //////////////////////////////////////////////////////////////////////////////////////////////
 //-------------------------------------------------------------------------------------------
 // funcao a ser chamada ao carregar a pagina
-function getStorageOnOpen(){
+
+
+function getStorageOnOpen() {
     if (localStorage.getItem('userPersistantData') == null) {
         localStorage.setItem('userPersistantData', JSON.stringify(objJasonDefault));
+        console.log(localStorage.getItem('userPersistantData'));
     } else {
-        objJasonDefault = localStorage.getItem('userPersistantData');
+        objJasonDefault = JSON.parse(localStorage.getItem('userPersistantData'));
     }
 }
 
 //funçao que sobrescreve o local storage com o jason atualizado
-function updateStorage(){
+function updateStorage() {
     localStorage.setItem('userPersistantData', JSON.stringify(objJasonDefault));
 }
+
+window.onload = getStorageOnOpen();
 
 
 //----------------Acima, funçoes de modelos de dados e armazenamento -----------------------
@@ -111,33 +115,42 @@ for (data in objThermes) {
     divButton.id = data;
 
     //se o tema está invertido, e é representado por essa div
-    if (objJasonDefault["theme-invert"]==true && data == objJasonDefault["color-theme-storage"]) {
-        divButton.style.backgroundColor = rgbSec;
-        divButton.style.borderColor = rgbPri;
-    }else{
+    if (objJasonDefault["theme-invert"] == true && data == objJasonDefault["color-theme-storage"]) {
+
         divButton.style.backgroundColor = rgbPri;
         divButton.style.borderColor = rgbSec;
+
+
+
+        
+    } else {
+        divButton.style.backgroundColor = rgbSec;
+        divButton.style.borderColor = rgbPri;
+
+
+
+       
     }
 
-    divNav.addEventListener('click',setThemeColor);
-
+    divButton.addEventListener('click', setThemeColor);
     divNav.appendChild(divButton);
 }
 
 //estilizando o texto e titulo pelo meuObjeto
-let titleTag = document.querySelector('.title-class');
-let backgroundReader = document.querySelector('.container');
-let pharagrafs = document.querySelector('.container');
+let titleTag = document.querySelector('.title-class');                       // tagTitle
+let backgroundReader = document.querySelector('.container');                 // backgour do fReader
+let pharagrafs = document.querySelector('.main-class');                       // paragrafo
 
 pharagrafs.style.fontFamily = objJasonDefault["font-family-storage"];
-pharagrafs.style.fontSize = objJasonDefault["font-sizeP-storage"]+'px';
-pharagrafs.style.lineHeight = objJasonDefault["line-height-storage"]+'px';
+pharagrafs.style.fontSize = objJasonDefault["font-sizeP-storage"] + 'px';
+pharagrafs.style.lineHeight = objJasonDefault["line-height-storage"] + 'px';
+titleTag.style.fontFamily = objJasonDefault["font-family-storage"];
 
-if(objJasonDefault["theme-invert"]==true){
-    titleTag.style.color = objThermes[objJasonDefault["color-theme-storage"]];['rgb-pri'];
+if (objJasonDefault["theme-invert"] == false) {
+    titleTag.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
     backgroundReader.style.backgroundColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
     pharagrafs.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
-}else{
+} else {
     titleTag.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
     backgroundReader.style.backgroundColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
     pharagrafs.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
@@ -154,52 +167,100 @@ let btnFont = document.querySelector('#font-change');
 let btnSpaceBetwenLines = document.querySelector('#space-line');
 let btnColors = document.querySelector('.div-button')
 
-btnSizeUp.addEventListener('click',setFontSizeUp);
-btnSizeDown.addEventListener('click',setFontSizeDonw);
-btnFont.addEventListener('click',setFontFamily);
-btnSpaceBetwenLines.addEventListener('click',setSpaceBetwenLines);
+btnSizeUp.addEventListener('click', setFontSizeUp);
+btnSizeDown.addEventListener('click', setFontSizeDonw);
+btnFont.addEventListener('click', setFontFamily);
+btnSpaceBetwenLines.addEventListener('click', setSpaceBetwenLines);
 
 
-function setFontSizeUp(event){
-    //console.log(event.target);
-    objJasonDefault;
-    
+function setFontSizeUp(event) {
+    if (objJasonDefault["font-sizeP-storage"] < fontSizeP.max) {
+
+        objJasonDefault["font-sizeP-storage"] += 2;
+        objJasonDefault["line-height-storage"] += 1;
+
+        pharagrafs.style.fontSize = objJasonDefault["font-sizeP-storage"] + 'px';
+        pharagrafs.style.lineHeight = objJasonDefault["line-height-storage"] + 'px';
+
+        console.log(objJasonDefault["font-sizeP-storage"]);
+    }
+    updateStorage();
+}
+
+function setFontSizeDonw(event) {
+
+    if (objJasonDefault["font-sizeP-storage"] > fontSizeP.min) {
+
+        objJasonDefault["font-sizeP-storage"] -= 2;
+        objJasonDefault["line-height-storage"] -= 1;
+
+        pharagrafs.style.fontSize = objJasonDefault["font-sizeP-storage"] + 'px';
+        pharagrafs.style.lineHeight = objJasonDefault["line-height-storage"] + 'px';
+        updateStorage();
+    }
+    updateStorage();
+}
+
+function setFontFamily(event) {
+    //aqui eu pego o index que a fonte atualmente selecionada ocupa no pressets
+    let indexFontActually = fontsPresets.indexOf(objJasonDefault["font-family-storage"]);
+
+    indexFontActually = (indexFontActually + 1 > fontsPresets.length - 1) ? indexFontActually = 0 : indexFontActually + 1;
+    objJasonDefault["font-family-storage"] = fontsPresets[indexFontActually];
+
+    pharagrafs.style.fontFamily = objJasonDefault["font-family-storage"];
+    titleTag.style.fontFamily = objJasonDefault["font-family-storage"];
 
     updateStorage();
 }
 
-function setFontSizeDonw(event){
-    objJasonDefault;
+function setSpaceBetwenLines(event) {
+  //  let valueScreen = pharagrafs.style.lineHeight;
+    objJasonDefault["line-height-storage"] += 5
 
+    if (objJasonDefault["line-height-storage"] > lineHeight.max) {
 
-    updateStorage();
-}
-
-function setFontFamily(event){
-    objJasonDefault;
-
-
-    updateStorage();
-}
-
-function setSpaceBetwenLines(event){
-    objJasonDefault;
-
+        objJasonDefault["line-height-storage"] = lineHeight.min;
+        pharagrafs.style.lineHeight = objJasonDefault["line-height-storage"] + 'px';
+    } else {
+        pharagrafs.style.lineHeight = objJasonDefault["line-height-storage"] + 'px';
+    }
 
     updateStorage();
 }
 
 
+function setThemeColor(event) {
+    let idDiv = '#' + event.target.id;
+    let colorButtonDiv = document.querySelector(idDiv);
 
-function setThemeColor(event){
-    //fazer aqui a magica do inverter
-    //id já ccapiturado no console log abaixo
+    //verificando se a ultima cor settada era referente ao tema invertido ou não
+    if(event.target.style.backgroundColor == objThermes[event.target.id]['rgb-pri']){
+        objJasonDefault["theme-invert"] = false;
+    }else{
+        objJasonDefault["theme-invert"]= true;
+    }
 
-   objJasonDefault;
+    //atribuindo o estilo ao objeto modelo
+    objJasonDefault["color-theme-storage"] = event.target.id;
 
-   console.log(event.target.id);
+    if (objJasonDefault["theme-invert"] == false) {
+        titleTag.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
+        backgroundReader.style.backgroundColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
+        pharagrafs.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
 
-   updateStorage();
+        colorButtonDiv.style.borderColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
+        colorButtonDiv.style.backgroundColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
+    } else {
+
+        titleTag.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
+        backgroundReader.style.backgroundColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
+        pharagrafs.style.color = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
+
+        colorButtonDiv.style.borderColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-sec'];
+        colorButtonDiv.style.backgroundColor = objThermes[objJasonDefault["color-theme-storage"]]['rgb-pri'];
+    }
+    updateStorage();
 }
 
 
