@@ -1,0 +1,22 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+#external-div {
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+    border: solid black 2px;
+    width: fit-content;
+    height: 500px;
+}
+p{
+    align-items: center;
+}
+
+
+label{
+    padding: 30px;
+}
