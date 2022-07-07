@@ -11,15 +11,16 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: yellow;
+    background-color: #d2d3d3;
     width: 600px;
-    height: 700px;
+    height: 750px;
     border-radius: 10px;
-    box-shadow: rgb(92, 90, 90);
-
 }
 p{
     align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
 }
 
 textarea{
@@ -27,10 +28,6 @@ textarea{
     align-self: center;
 }
 
-label{
-    align-items: center;
-    padding: 0px;
-}
 #name-form{
     width: 300px;
 }
@@ -40,7 +37,8 @@ label{
 }
 
 hr{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: black;
 }
 
@@ -48,8 +46,7 @@ button{
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-    background-color: #5995da;
-    border: none;
+    background-color: #3183e0;
     border-radius: 3px;
     padding: 10px 40px;
     cursor: pointer;
