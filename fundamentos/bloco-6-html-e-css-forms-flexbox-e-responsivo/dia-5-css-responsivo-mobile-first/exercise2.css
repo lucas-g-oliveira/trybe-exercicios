@@ -7,10 +7,6 @@ html {
   }
 
   @media screen and (max-width:375px){
-    body{
-        
-    }
-
     .container{
         display: flex;
         flex-direction: column;
@@ -71,10 +67,76 @@ html {
 
 
 
+
+
   @media screen and (min-width:376px) and (max-width:800px){
-    body{
-        background-color: antiquewhite;
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        
     }
+
+    header p{
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+    }
+
+    header ul{
+        width: 90%;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    header li{
+        margin: 5px;
+        background-color: aqua;
+        padding: 10px;
+        border-radius: 10px;
+        list-style: none;
+    }
+
+    aside ul{
+        border-radius: 5px;
+        background-color: aqua;
+        margin: 10px;
+        list-style: none;
+        margin: 50px;
+    }
+
+    aside h2{
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    p{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 18px;
+    }
+
+
+    h1{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    footer{
+        background-color: aqua;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 45px;
+    }
+
+    .main-content{
+        margin: 50px;
+    }
+
+    header p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
   }
 
   @media screen and (min-width:801px) {
