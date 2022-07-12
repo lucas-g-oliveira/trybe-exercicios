@@ -39,7 +39,7 @@ section {
 }
 
 figure {
-	margin: 10;
+	margin: 15px;
 }
 
 figcaption {
@@ -52,4 +52,20 @@ p{
 
 h1{
   font-size: 28px;
+}
+
+@media screen and (min-width:800px){
+  section{
+    width: 90vw;
+    display: flex !important; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  body{
+    background-color: yellow;
+    font-size: 13px;
+    margin: 20px;
+  }
 }
