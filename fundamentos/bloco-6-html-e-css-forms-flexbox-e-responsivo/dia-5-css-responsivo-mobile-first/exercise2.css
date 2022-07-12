@@ -5,3 +5,80 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  @media screen and (max-width:375px){
+    body{
+        
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 20px;
+    }
+
+    header p{
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+    }
+
+    header ul{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    header li{
+        background-color: antiquewhite;
+        padding: 10px;
+        border-radius: 10px;
+        list-style: none;
+    }
+
+    aside ul{
+        border-radius: 5px;
+        background-color: antiquewhite;
+        margin: 10px;
+        list-style: none;
+    }
+
+    aside h2{
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    p{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 18px;
+    }
+
+
+    h1{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    footer{
+        background-color: antiquewhite;
+        padding: 10px;
+        border-radius: 5px;
+    }
+  }
+
+
+
+
+  @media screen and (min-width:376px) and (max-width:800px){
+    body{
+        background-color: antiquewhite;
+    }
+  }
+
+  @media screen and (min-width:801px) {
+    body{
+        background-color: antiquewhite;
+    }
+  }
