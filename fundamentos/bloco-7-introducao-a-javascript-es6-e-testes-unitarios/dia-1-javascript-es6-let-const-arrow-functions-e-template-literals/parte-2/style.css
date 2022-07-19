@@ -1,0 +1,15 @@
+#area-click{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#buton-click{
+    width: 100px;
+}
+

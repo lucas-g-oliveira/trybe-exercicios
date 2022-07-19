@@ -8,6 +8,7 @@
 3 - Modifique as concatenações para template literals.
 */
 
+//Feito!
 const testingScope = (escopo) => {
     if (escopo === true) {
         let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
@@ -33,6 +34,7 @@ testingScope(true);
 
 
 // Seu código aqui.
+//Feito!
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 sortArray(oddsAndEvens);
 
@@ -45,25 +47,3 @@ function sortArray() {
 }
 
 console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!".`);
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////// PARTE 2 - EXERCICIO - 1 ///////////////////////////////////////////////////
-
-// PARTE 2 // 1 - Crie uma função que receba um número e retorne seu fatorial.
-
-const fatorial = (numero) => {
-    let temp = 1;
-    for (let num = numero; num >= 1; num -= 1) {
-        temp *= num;
-    }
-    return temp;
-}
-
-console.log(fatorial(4));
-
-// PARTE 2 // 2 - Crie uma função que receba uma frase e retorne a maior palavra.
-
-// PARTE 2 //  3 -  Crie uma página com um contador de cliques
-
-// PARTE 2 //  4 - Crie duas funções JavaScript com as seguintes especificações:
