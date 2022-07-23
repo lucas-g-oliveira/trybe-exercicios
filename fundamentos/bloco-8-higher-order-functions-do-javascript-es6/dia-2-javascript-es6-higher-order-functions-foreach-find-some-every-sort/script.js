@@ -1,22 +1,4 @@
 /*
-
-function booksOrderedByReleaseYearDesc() {
-  // escreva aqui seu código
-}
-🚀 5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
-Copiar
-const expectedResult = false;
-
-function everyoneWasBornOnSecXX() {
-  // escreva seu código aqui
-}
-🚀 6 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
-Copiar
-const expectedResult = true;
-
-function someBookWasReleaseOnThe80s() {
-  // escreva seu código aqui
-}
 7 - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
 Copiar
 const expectedResult = false;
@@ -141,7 +123,7 @@ Ex(5, ' Faça uma função que retorne true, se todas as pessoas autoras nascera
 //books.forEach((e) => console.log(e.author.birthYear + ' --- ' + e.author.name));
 
 const everyoneWasBornOnSecXX = (arrayBook = []) => {
-    return arrayBook.every((e) => e.author.birthYear >= 1901 && e.author.birthYear <= 2000)
+    return arrayBook.every((e) => e.author.birthYear >= 1901 && e.author.birthYear <= 2000);
 }
 
 console.log(`\nR: ${everyoneWasBornOnSecXX(books)}\n `);
@@ -149,4 +131,10 @@ console.log(`\nR: ${everyoneWasBornOnSecXX(books)}\n `);
 ////////////////////////////////////////////////////////////////////////////////////////
 Ex(6, 'Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.')
 
+const someBookWasReleaseOnThe80s = (arrayBook = []) => {
+    return arrayBook.some((e) => e.releaseYear >= 1980 && e.releaseYear <= 1989);
+}
 
+console.log(someBookWasReleaseOnThe80s(books));
+
+Ex(7,'');
