@@ -120,7 +120,7 @@ booksOrderedByReleaseYearDesc.forEach((e) => console.log(`${e.releaseYear} --- $
 ///////////////////////////////////////////////////////////////////////////////////////
 Ex(5, ' Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.');
 
-//books.forEach((e) => console.log(e.author.birthYear + ' --- ' + e.author.name));
+books.forEach((e) => console.log(e.author.birthYear + ' --- ' + e.author.name));
 
 const everyoneWasBornOnSecXX = (arrayBook = []) => {
     return arrayBook.every((e) => e.author.birthYear >= 1901 && e.author.birthYear <= 2000);
@@ -137,4 +137,13 @@ const someBookWasReleaseOnThe80s = (arrayBook = []) => {
 
 console.log(someBookWasReleaseOnThe80s(books));
 
-Ex(7,'');
+/////////////////////////////////////////////////////////////////////////////////////////
+Ex(7, 'Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.');
+
+function authorUnique(array = []) {
+    let arrayTemp = [];
+    array.forEach((e) => { arrayTemp.push(e.author.birthYear) });
+    return (arrayTemp.length === [... new Set(arrayTemp)].length) ? true : false;
+}
+
+console.log(authorUnique(books));
