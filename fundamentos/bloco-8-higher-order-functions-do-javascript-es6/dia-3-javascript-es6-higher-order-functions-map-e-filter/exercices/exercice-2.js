@@ -95,9 +95,19 @@ const books = [
   ];
 */
 
-function nameAndAge() {
-    // escreva seu código aqui
-  }
+function nameAndAge(array = []) {
+  let arrayTemp = array.map((e) => (
+    {
+      age: e.releaseYear - e.author.birthYear,
+      author: e.author.name
+    }
+  ));
+
+  return arrayTemp.sort((a, b) => {
+    return a.age - b.age;
+  })
+}
+console.log(nameAndAge(books));
 
 
-module.exports = {nameAndAge};
+module.exports = { nameAndAge };

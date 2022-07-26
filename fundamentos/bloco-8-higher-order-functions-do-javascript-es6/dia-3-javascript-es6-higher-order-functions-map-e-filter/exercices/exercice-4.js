@@ -90,8 +90,25 @@ const books = [
   ];
 */
 
-function oldBooksOrdered() {
-    // escreva seu código aqui
+function oldBooksOrdered(array = []) {
+  return array
+    .filter((e) => (e.releaseYear < (2022 - 60)))
+    .sort((a, b) => a.releaseYear - b.releaseYear);
 }
 
+console.log(oldBooksOrdered(books));
+
 module.exports = oldBooksOrdered;
+
+/*
+  {
+    id: 6,
+    name: 'O Chamado de Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+*/

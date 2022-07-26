@@ -74,10 +74,10 @@ const books = [
   ];
 */
 
-function formatedBookNames() {
-    
-  }
+function formatedBookNames(array = []){
+ return array.map((e) => `${e.name} - ${e.genre} - ${e.author.name}`);
+}
 
-  console.log(books);
+console.log(formatedBookNames(books));
 
-module.exports = {formatedBookNames};
+module.exports = { formatedBookNames };

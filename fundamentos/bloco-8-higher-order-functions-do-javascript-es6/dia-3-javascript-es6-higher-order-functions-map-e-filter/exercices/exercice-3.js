@@ -96,8 +96,10 @@ const books = [
   ];
 */
 
-function fantasyOrScienceFiction() {
-    // escreva seu código aqui
+function fantasyOrScienceFiction(array = []) {
+    return array.filter((e)=> (e.genre === 'Ficção Científica' || e.genre === 'Fantasia'));
 };
+
+console.log(fantasyOrScienceFiction(books));
 
 module.exports = fantasyOrScienceFiction;
