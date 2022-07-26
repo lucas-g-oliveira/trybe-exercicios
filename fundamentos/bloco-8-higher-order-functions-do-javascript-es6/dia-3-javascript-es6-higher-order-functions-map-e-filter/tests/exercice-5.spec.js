@@ -1,0 +1,1 @@
+const { oldBooks } = require('../exercices/exercice-6')

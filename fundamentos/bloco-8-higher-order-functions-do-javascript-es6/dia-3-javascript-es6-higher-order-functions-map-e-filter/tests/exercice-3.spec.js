@@ -1,0 +1,1 @@
+const { fantasyOrScienceFiction } = require('../exercices/exercice-3')

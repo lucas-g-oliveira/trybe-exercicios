@@ -1,0 +1,1 @@
+const { nameAndAge } = require('../exercices/exercice-2')

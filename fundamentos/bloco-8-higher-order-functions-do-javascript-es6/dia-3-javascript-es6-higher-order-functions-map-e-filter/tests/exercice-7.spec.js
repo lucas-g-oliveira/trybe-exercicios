@@ -1,0 +1,1 @@
+const { authorWith3DotsOnName } = require('../exercices/exercice-7')
