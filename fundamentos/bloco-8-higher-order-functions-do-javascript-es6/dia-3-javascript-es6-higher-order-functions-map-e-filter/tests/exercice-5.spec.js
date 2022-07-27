@@ -1,1 +1,1 @@
-const { oldBooks } = require('../exercices/exercice-6')
+const { fantasyOrScienceFictionAuthors } = require('../exercices/exercice-5')
